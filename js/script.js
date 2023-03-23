@@ -76,12 +76,64 @@ function abyssinian() {fetch('https://api.thecatapi.com/v1/images/search?breed_i
   })
 }
 
+function abyssinianMini() {fetch('https://api.thecatapi.com/v1/images/search?breed_ids=abys', {
+  headers: {
+    'x-api-key': 'live_BLpAGAgFDsYnQrtHo3YFHy9HdB4h0yAzYOZCgDytYztFA0VpVqiRVNrowWOZBOXq'
+  }
+}).then(res => res.json()).then(result => {
+    const image = document.querySelector('.miniature-1');
+    image.src = result[0].url;
+      image.classList.remove('hidden');
+      const loader = document.querySelector('.loader');
+      loader.classList.add('hidden');
+  })
+}
+
+function abyssinianMiniTwo() {fetch('https://api.thecatapi.com/v1/images/search?breed_ids=abys', {
+  headers: {
+    'x-api-key': 'live_BLpAGAgFDsYnQrtHo3YFHy9HdB4h0yAzYOZCgDytYztFA0VpVqiRVNrowWOZBOXq'
+  }
+}).then(res => res.json()).then(result => {
+    const image = document.querySelector('.miniature-2');
+    image.src = result[0].url;
+      image.classList.remove('hidden');
+      const loader = document.querySelector('.loader');
+      loader.classList.add('hidden');
+  })
+}
+
 function aegan() {fetch('https://api.thecatapi.com/v1/images/search?breed_ids=aege', {
   headers: {
     'x-api-key': 'live_BLpAGAgFDsYnQrtHo3YFHy9HdB4h0yAzYOZCgDytYztFA0VpVqiRVNrowWOZBOXq'
   }
 }).then(res => res.json()).then(result => {
     const image = document.querySelector('#cats-image');
+    image.src = result[0].url;
+      image.classList.remove('hidden');
+      const loader = document.querySelector('.loader');
+      loader.classList.add('hidden');
+  })
+}
+
+function aeganMini() {fetch('https://api.thecatapi.com/v1/images/search?breed_ids=aege', {
+  headers: {
+    'x-api-key': 'live_BLpAGAgFDsYnQrtHo3YFHy9HdB4h0yAzYOZCgDytYztFA0VpVqiRVNrowWOZBOXq'
+  }
+}).then(res => res.json()).then(result => {
+    const image = document.querySelector('.miniature-1');
+    image.src = result[0].url;
+      image.classList.remove('hidden');
+      const loader = document.querySelector('.loader');
+      loader.classList.add('hidden');
+  })
+}
+
+function aeganMiniTwo() {fetch('https://api.thecatapi.com/v1/images/search?breed_ids=aege', {
+  headers: {
+    'x-api-key': 'live_BLpAGAgFDsYnQrtHo3YFHy9HdB4h0yAzYOZCgDytYztFA0VpVqiRVNrowWOZBOXq'
+  }
+}).then(res => res.json()).then(result => {
+    const image = document.querySelector('.miniature-2');
     image.src = result[0].url;
       image.classList.remove('hidden');
       const loader = document.querySelector('.loader');
@@ -176,6 +228,9 @@ americanCurlCat.addEventListener('click', americanCurl)
 americanShorthairCat.addEventListener('click', americanShorthair)
 americanWirehairCat.addEventListener('click', americanWirehair)
 arabianMauCat.addEventListener('click', arabianMau)
-
+abyssinianCat.addEventListener('click', abyssinianMini)
+abyssinianCat.addEventListener('click', abyssinianMiniTwo)
+aeganCat.addEventListener('click', aeganMini)
+aeganCat.addEventListener('click', aeganMiniTwo)
 
 
